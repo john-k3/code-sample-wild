@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* CONTENTS
+
+1. RESET
+2. CLEAR FLOAT
+3. SITE STYLES
+4. FLUID GRID
+5. LAYOUT
+6. MAIN NAV
+7. FOOTER INFO
+
+*/
+
+
+/* 1 = RESET
+=========================
+
+http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a	{text-decoration:none;}
+
+
+/* REMOVE IOS TEL LINK SYTLE */
+a[href^=tel]{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* 2 - CLEAR FLOAT
+============================*/
+
+.cf:before,
+.cf:after{
+	content: " ";
+	display: table;
+}
+
+.cf:after{
+	clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* #clearing
+===============================*/
+
+  /* self clearing */
+  .wrapper:after{content:"/0020"; display:block; height:0; clear:both; visibility:hidden;}
+  
+/* 3 - SITE STYLES
+===============================*/
+
+body{
+	font-family: 'Amatic SC', cursive;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-size-adjust: 100%;
+ 		-moz-osx-font-smoothing: grayscale;
+		background:url(../images/Burlap-Texture-4.jpg);
+		background-size:100%;
+}
+  p{ color:#ffffff; font-family:Helvetica, sans-serif; font-size:16px; line-height:1em; padding-bottom:5px; font-weight:normal; text-align:justify;}
+  p a{ color:#996600;}
+  p a:hover{ color:#cccc99;}
+  
+  h1{ font-size:50px; color:#ffffff; text-align:center; margin-bottom:10px;}
+  
+  h2{ font-size:50px; color:#cccc99; text-align:center;}
+  
+  h3{ font-size:20px; color:#cccc99; }
+  
+  h4{ font-size:30px; color:#ffffff; }
+  
+  h5{ font-size:20px; color:#69a843; }
+  
+  h6{ font-size:20px; color:#cccc99; }
+  
+/* 4 - FLUID GRID
+=============================*/
+
+.wrapper{ width:100%; height:100%; position:relative; max-width:1000px; min-width:700px; margin: 0 auto; background:#000000; overflow:hidden; z-index:1;}
+
+.column, .columns{ float:left; position:relative;}
+
+.half-col{ width:50%; display:block;}
+.full-col{ width:100%; display:block;}
+
+.one-five-col{ width:20%; display:block;}
+.two-five-col{ width:40%; display:block;}
+.three-five-col{ width:60%; display:block;}
+.four-five-col{ width:80%; display:block;}
+
+.one-four-col{ width:25%; display:block;}
+.three-four-col{ width:75%; display:block;}
+
+.one-three-col{ width:33.333%; display:block;}
+.two-three-col{ width:66.666%; display:block;}
+
+.one-nine-col{ width:11.111%; display:block;}
+.two-nine-col{ width:22.222%; display:block;}
+
+/* 5 - LAYOUT
+==============================*/
+
+img{ max-width:100%; height:auto;}
+
+span.color1{ color:#cccc99}
+span.color2{ color:#996600}
+span.color3{ color:#ffffff}
+
+.row{ width:100%; float:left;}
+.row.nopad{ padding-bottom:0px;}
+
+#header{ background:#000000; float:left; width:100%; padding-top:30px; padding-bottom:15px; padding-right:5px; padding-left:5px;}
+
+#footer{ background:#000000; float:left; width:100%; padding-top:5px; padding-bottom:5px; padding-right:5px; padding-left:5px;}
+
+.slogan{ font-family: 'Amatic SC', cursive; font-size:50px; color:#ffffff; text-align:right;}
+
+.logo{ margin:5px;}
+
+.text{ margin:20px;}
+
+.title-text{ margin:5px;}
+
+.vertbar{ background:#4e5049;}
+
+.main-pic{ background:url(../images/Morningside.jpg) no-repeat; background-size:cover; height:278px;}
+.pow{ background:url(../images/powLogo.png) no-repeat; background-size:cover; height:158px; margin:5px;}
+.tcrp{ background:url(../images/tcrpLogo.png) no-repeat; background-size:cover; height:131px; margin:5px;}
+.npf{ background:url(../images/npfLogo.png) no-repeat; background-size:cover; height:88px; margin:5px;}
+.roman{ background:url(../images/wildRomanInverse.png) no-repeat; background-size:cover; height:343px; margin:5px;}
+
+.home{ background:url(../images/lakeMinnewaska.jpg) no-repeat; background-size:cover; height:422px;}
+
+.gn{ background:url(../images/grandmasNipple.jpg) no-repeat; background-size:cover; height:666px;}
+
+.ar{ background:url(../images/alaskaRange1.jpg) no-repeat; background-size:cover; height:277px;}
+
+/* HAT THUMBNAILS */
+
+.gwh{ background:url(../images/getWildHat.png) no-repeat; background-size:cover; height:416px;}
+.lh{ background:url(../images/logoHat.png) no-repeat; background-size:cover; height:416px;}
+.ch{ background:url(../images/classicHat.png) no-repeat; background-size:cover; height:416px;}
+.th{ background:url(../images/tentHat.png) no-repeat; background-size:cover; height:416px;}
+
+/* LARGE SHIRT THUMBNAILS */
+
+.lw{ background:url(../images/logoTWhite.png) no-repeat; background-size:cover; height:416px;}
+.no{ background:url(../images/natureTOlive.png) no-repeat; background-size:cover; height:416px;}
+.rb{ background:url(../images/romanTBlack.png) no-repeat; background-size:cover; height:416px;}
+.let{ background:url(../images/leatherTTan.png) no-repeat; background-size:cover; height:416px;}
+.vt{ background:url(../images/vibesTTan.png) no-repeat; background-size:cover; height:416px;}
+.gr{ background:url(../images/getWildRasta.png) no-repeat; background-size:cover; height:416px;}
+.tb{ background:url(../images/tentBaseball.png) no-repeat; background-size:cover; height:416px;}
+.cb{ background:url(../images/crossedBaseball.png) no-repeat; background-size:cover; height:416px;}
+.rbbw{ background:url(../images/romanBaseball.png) no-repeat; background-size:cover; height:416px;}
+.sbl{ background:url(../images/slantBaseballBlue.png) no-repeat; background-size:cover; height:416px;}
+
+/* SPACE HOLDERS */
+
+.sh{ background:url(../images/spaceHolder.png) no-repeat; background-size:cover; height:416px;}
+
+.ssh{ background:url(../images/spaceHolder.png) no-repeat; background-size:cover; height:138px;}
+
+.sdh{ background:url(../images/dubSpaceHolder.png) no-repeat; background-size:cover; height:138px;}
+
+/* SMALL SHIRT THUMBNAILS */
+
+.lb{ background:url(../images/logoTBlack.png) no-repeat; background-size:cover; height:138px;}
+.lo{ background:url(../images/logoTOlive.png) no-repeat; background-size:cover; height:138px;}
+.nb{ background:url(../images/natureTBlack.png) no-repeat; background-size:cover; height:138px;}
+.nw{ background:url(../images/natureTWhite.png) no-repeat; background-size:cover; height:138px;}
+.rw{ background:url(../images/romanTWhite.png) no-repeat; background-size:cover; height:138px;}
+.vb{ background:url(../images/vibesTBlack.png) no-repeat; background-size:cover; height:138px;}
+.vw{ background:url(../images/vibesTWhite.png) no-repeat; background-size:cover; height:138px;}
+.vr{ background:url(../images/vibesTRasta.png) no-repeat; background-size:cover; height:138px;}
+.gb{ background:url(../images/getWildBlue.png) no-repeat; background-size:cover; height:138px;}
+.gg{ background:url(../images/getWildGrey.png) no-repeat; background-size:cover; height:138px;}
+.cg{ background:url(../images/crossedBaseballGold.png) no-repeat; background-size:cover; height:138px;}
+.co{ background:url(../images/crossedBaseballOlive.png) no-repeat; background-size:cover; height:138px;}
+.cr{ background:url(../images/crossedBaseballRed.png) no-repeat; background-size:cover; height:138px;}
+.rbbb{ background:url(../images/romanBaseballInvert.png) no-repeat; background-size:cover; height:138px;}
+.sb{ background:url(../images/slantBaseball.png) no-repeat; background-size:cover; height:138px;}
+.sr{ background:url(../images/slantBaseballRed.png) no-repeat; background-size:cover; height:138px;}
+
+
+
+
+/* 6 - MAIN NAV
+===============================*/
+
+#main-nav{ float:right; font-family: 'Amatic SC', cursive; font-size:30px; font-weight:700; color:#ffffff; text-align:right; display:block; width:100%;}
+
+#main-nav a, #main-nav a:visited, #main-nav a:active, #main-nav a:link{ color:#ffffff; text-decoration:none;}
+
+#main-nav a:hover{ color:#ffffff; text-decoration:underline;}
+
+#main-nav li{ padding-bottom:20px;}
+
+#main-nav li ul{ text-align:center;}
+
+#menu li{ display:inline;}
+#menu li a{ padding:0px 30px; border-right:1px solid #ffffff;}
+#menu li a.first{ padding-left:0px; padding-right:30px;}
+#menu li a.last{ border-right:none;}
+#menu li ul{ color:#ffffff; padding:10px; list-style-type:none;}
+
+/* 7 - FOOTER INFO
+=====================================*/
+
+#base{ margin:15px;}
+
+#base p{ float:right; font-family: 'Amatic SC', cursive; font-size:25px; font-weight:700; color:#ffffff; text-align:right; display:block; width:100%;}
